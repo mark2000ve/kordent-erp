@@ -1,0 +1,8 @@
+[workspace]
+resolver = "3"
+members = [
+    "apps/kordent-api",
+    "apps/kordent-worker",
+    "apps/kordent-cli",
+    "crates/kordent-core",
+]
