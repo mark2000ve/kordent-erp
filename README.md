@@ -19,6 +19,8 @@ Proyecto en fase inicial de desarrollo.
 
 ```bash
 cargo fmt --all -- --check
-cargo check --workspace
+cargo check --workspace --all-targets --all-features
 cargo clippy --workspace --all-targets --all-features -- -D warnings
 cargo test --workspace
+cargo doc --workspace --no-deps
+```
