@@ -2,6 +2,37 @@ use std::{error::Error, fmt, str::FromStr};
 
 use uuid::Uuid;
 
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct Organization {
+    id: OrganizationId,
+    name: OrganizationName,
+}
+
+impl Organization {
+    #[must_use]
+    pub fn new(name: OrganizationName) -> Self {
+        Self {
+            id: OrganizationId::new(),
+            name,
+        }
+    }
+
+    #[must_use]
+    pub const fn from_parts(id: OrganizationId, name: OrganizationName) -> Self {
+        Self { id, name }
+    }
+
+    #[must_use]
+    pub const fn id(&self) -> OrganizationId {
+        self.id
+    }
+
+    #[must_use]
+    pub const fn name(&self) -> &OrganizationName {
+        &self.name
+    }
+}
+
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub struct OrganizationId(Uuid);
 
@@ -86,8 +117,27 @@ impl Error for OrganizationNameError {}
 
 #[cfg(test)]
 mod tests {
-    use super::{OrganizationId, OrganizationName, OrganizationNameError};
+    use super::{Organization, OrganizationId, OrganizationName, OrganizationNameError};
     use uuid::Uuid;
+
+    #[test]
+    fn creates_an_organization_with_a_generated_identifier() {
+        let name = OrganizationName::new("KORDENT ERP").expect("name should be valid");
+        let organization = Organization::new(name);
+
+        assert_eq!(organization.name().as_str(), "KORDENT ERP");
+        assert_eq!(organization.id().as_uuid().get_version_num(), 7);
+    }
+
+    #[test]
+    fn restores_an_organization_from_existing_parts() {
+        let id = OrganizationId::from_uuid(Uuid::from_u128(42));
+        let name = OrganizationName::new("KORDENT").expect("name should be valid");
+        let organization = Organization::from_parts(id, name);
+
+        assert_eq!(organization.id(), id);
+        assert_eq!(organization.name().as_str(), "KORDENT");
+    }
 
     #[test]
     fn generates_an_organization_id_that_round_trips_through_text() {
