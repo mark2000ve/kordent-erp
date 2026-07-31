@@ -31,6 +31,10 @@ impl Organization {
     pub const fn name(&self) -> &OrganizationName {
         &self.name
     }
+
+    pub fn rename(&mut self, name: OrganizationName) {
+        self.name = name;
+    }
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
@@ -137,6 +141,19 @@ mod tests {
 
         assert_eq!(organization.id(), id);
         assert_eq!(organization.name().as_str(), "KORDENT");
+    }
+
+    #[test]
+    fn renames_an_organization_without_changing_its_identifier() {
+        let original_name = OrganizationName::new("KORDENT").expect("name should be valid");
+        let mut organization = Organization::new(original_name);
+        let original_id = organization.id();
+
+        let new_name = OrganizationName::new("KORDENT ERP").expect("name should be valid");
+        organization.rename(new_name);
+
+        assert_eq!(organization.id(), original_id);
+        assert_eq!(organization.name().as_str(), "KORDENT ERP");
     }
 
     #[test]
