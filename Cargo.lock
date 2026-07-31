@@ -5,10 +5,16 @@ version = 4
 [[package]]
 name = "kordent-api"
 version = "0.1.0"
+dependencies = [
+ "kordent-core",
+]
 
 [[package]]
 name = "kordent-cli"
 version = "0.1.0"
+dependencies = [
+ "kordent-core",
+]
 
 [[package]]
 name = "kordent-core"
@@ -17,3 +23,6 @@ version = "0.1.0"
 [[package]]
 name = "kordent-worker"
 version = "0.1.0"
+dependencies = [
+ "kordent-core",
+]
