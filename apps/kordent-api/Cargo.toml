@@ -9,4 +9,4 @@ publish.workspace = true
 workspace = true
 
 [dependencies]
-kordent-core.workspace = true
+kordent-application.workspace = true

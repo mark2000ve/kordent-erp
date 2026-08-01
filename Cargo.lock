@@ -64,7 +64,7 @@ dependencies = [
 name = "kordent-api"
 version = "0.1.0"
 dependencies = [
- "kordent-core",
+ "kordent-application",
 ]
 
 [[package]]
@@ -78,7 +78,7 @@ dependencies = [
 name = "kordent-cli"
 version = "0.1.0"
 dependencies = [
- "kordent-core",
+ "kordent-application",
 ]
 
 [[package]]
@@ -92,7 +92,7 @@ dependencies = [
 name = "kordent-worker"
 version = "0.1.0"
 dependencies = [
- "kordent-core",
+ "kordent-application",
 ]
 
 [[package]]
