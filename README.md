@@ -10,6 +10,7 @@ Proyecto en fase inicial de desarrollo.
 
 ## Estructura
 
+- `apps/kordent-web`: interfaz web compartida con la futura aplicación de escritorio.
 - `apps/kordent-api`: API principal del sistema.
 - `apps/kordent-worker`: procesamiento de tareas en segundo plano.
 - `apps/kordent-cli`: herramientas de administración por terminal.

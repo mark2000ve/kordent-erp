@@ -19,6 +19,7 @@ KORDENT ERP es una plataforma empresarial:
 - `kordent-api`: acceso remoto para la aplicación web y la sincronización.
 - `kordent-worker`: tareas centrales en segundo plano.
 - `kordent-cli`: administración por terminal.
+- `kordent-web`: interfaz compartida para navegador y aplicación de escritorio.
 - Aplicación de escritorio Tauri: reutiliza la interfaz web y ejecuta lógica local en Rust.
 
 El dominio no debe depender de bases de datos, frameworks web, sistemas operativos ni servicios externos.
@@ -41,7 +42,7 @@ Los idiomas, monedas, zonas horarias, formatos y reglas regionales deberán ser 
 
 La versión web utilizará la API central y requerirá conexión con el servidor.
 
-La tecnología concreta del frontend todavía no está decidida. La interfaz deberá poder reutilizarse dentro de la aplicación de escritorio.
+La interfaz se implementará con React, TypeScript y Vite. El mismo frontend se reutilizará dentro de la aplicación de escritorio.
 
 ## Aplicación de escritorio
 
@@ -75,7 +76,6 @@ Las reglas concretas para resolver conflictos se definirán por agregado antes d
 
 Todavía deben definirse:
 
-- Framework del frontend.
 - Motor de base de datos central.
 - Protocolo de sincronización.
 - Autenticación y autorización.
