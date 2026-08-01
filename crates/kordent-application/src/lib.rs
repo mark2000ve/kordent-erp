@@ -2,4 +2,4 @@
 
 mod organization;
 
-pub use organization::create_organization;
+pub use organization::{create_organization, rename_organization};
