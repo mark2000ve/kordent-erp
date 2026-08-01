@@ -23,10 +23,20 @@ La arquitectura multiempresa, global y con funcionamiento offline se describe en
 
 ## Validación
 
+### Rust
+
 ```bash
 cargo fmt --all -- --check
 cargo check --workspace --all-targets --all-features
 cargo clippy --workspace --all-targets --all-features -- -D warnings
 cargo test --workspace
 cargo doc --workspace --no-deps
+```
+
+### Interfaz web
+
+```bash
+npm ci --prefix apps/kordent-web
+npm run lint --prefix apps/kordent-web
+npm run build --prefix apps/kordent-web
 ```

@@ -22,6 +22,22 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v6.3.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: apps/kordent-web/package-lock.json
+
+      - name: Install web dependencies
+        run: npm ci --prefix apps/kordent-web
+
+      - name: Lint web application
+        run: npm run lint --prefix apps/kordent-web
+
+      - name: Build web application
+        run: npm run build --prefix apps/kordent-web
+
       - name: Show Rust toolchain
         run: |
           rustc --version
