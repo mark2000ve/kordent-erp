@@ -16,6 +16,10 @@ Proyecto en fase inicial de desarrollo.
 - `crates/kordent-application`: casos de uso y servicios de aplicación.
 - `crates/kordent-core`: lógica y tipos compartidos del dominio.
 
+## Arquitectura
+
+La arquitectura multiempresa, global y con funcionamiento offline se describe en [`docs/architecture.md`](docs/architecture.md).
+
 ## Validación
 
 ```bash
