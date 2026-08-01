@@ -13,6 +13,7 @@ Proyecto en fase inicial de desarrollo.
 - `apps/kordent-api`: API principal del sistema.
 - `apps/kordent-worker`: procesamiento de tareas en segundo plano.
 - `apps/kordent-cli`: herramientas de administración por terminal.
+- `crates/kordent-application`: casos de uso y servicios de aplicación.
 - `crates/kordent-core`: lógica y tipos compartidos del dominio.
 
 ## Validación
