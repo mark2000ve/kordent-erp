@@ -5,6 +5,7 @@ members = [
     "apps/kordent-worker",
     "apps/kordent-cli",
     "crates/kordent-core",
+    "crates/kordent-application",
 ]
 
 [workspace.package]
@@ -14,6 +15,7 @@ rust-version = "1.97.1"
 publish = false
 
 [workspace.dependencies]
+kordent-application = { path = "crates/kordent-application" }
 kordent-core = { path = "crates/kordent-core" }
 uuid = { version = "1.24.0", features = ["v7"] }
 

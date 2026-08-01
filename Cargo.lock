@@ -68,6 +68,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "kordent-application"
+version = "0.1.0"
+dependencies = [
+ "kordent-core",
+]
+
+[[package]]
 name = "kordent-cli"
 version = "0.1.0"
 dependencies = [
