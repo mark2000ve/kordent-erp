@@ -17,6 +17,7 @@ Proyecto en fase inicial de desarrollo.
 - `apps/kordent-cli`: herramientas de administración por terminal.
 - `crates/kordent-application`: casos de uso y servicios de aplicación.
 - `crates/kordent-core`: lógica y tipos compartidos del dominio.
+- `crates/kordent-infrastructure`: adaptadores de persistencia y servicios externos.
 
 ## Arquitectura
 

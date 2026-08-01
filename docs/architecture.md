@@ -15,7 +15,7 @@ KORDENT ERP es una plataforma empresarial:
 
 - `kordent-core`: modelo, identificadores y reglas del dominio.
 - `kordent-application`: casos de uso y puertos requeridos por la aplicación.
-- Adaptadores de infraestructura: persistencia local, persistencia central y servicios externos.
+- `crates/kordent-infrastructure`: adaptadores de persistencia local, persistencia central y servicios externos.
 - `kordent-api`: acceso remoto para la aplicación web y la sincronización.
 - `kordent-worker`: tareas centrales en segundo plano.
 - `kordent-cli`: administración por terminal.
