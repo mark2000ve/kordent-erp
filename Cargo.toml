@@ -4,6 +4,7 @@ members = [
     "apps/kordent-api",
     "apps/kordent-worker",
     "apps/kordent-cli",
+    "apps/kordent-web/src-tauri",
     "crates/kordent-core",
     "crates/kordent-application",
 ]

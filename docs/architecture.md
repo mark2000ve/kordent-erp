@@ -20,7 +20,7 @@ KORDENT ERP es una plataforma empresarial:
 - `kordent-worker`: tareas centrales en segundo plano.
 - `kordent-cli`: administración por terminal.
 - `kordent-web`: interfaz compartida para navegador y aplicación de escritorio.
-- Aplicación de escritorio Tauri: reutiliza la interfaz web y ejecuta lógica local en Rust.
+- `apps/kordent-web/src-tauri`: host de escritorio Tauri que reutiliza la interfaz web y ejecuta lógica local en Rust.
 
 El dominio no debe depender de bases de datos, frameworks web, sistemas operativos ni servicios externos.
 

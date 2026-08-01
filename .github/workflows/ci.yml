@@ -38,6 +38,20 @@ jobs:
       - name: Build web application
         run: npm run build --prefix apps/kordent-web
 
+      - name: Install desktop system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes \
+            libwebkit2gtk-4.1-dev \
+            build-essential \
+            curl \
+            wget \
+            file \
+            libxdo-dev \
+            libssl-dev \
+            libayatana-appindicator3-dev \
+            librsvg2-dev
+
       - name: Show Rust toolchain
         run: |
           rustc --version

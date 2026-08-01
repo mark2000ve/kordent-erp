@@ -11,6 +11,7 @@ Proyecto en fase inicial de desarrollo.
 ## Estructura
 
 - `apps/kordent-web`: interfaz web compartida con la futura aplicación de escritorio.
+- `apps/kordent-web/src-tauri`: aplicación de escritorio Tauri que reutiliza la interfaz web.
 - `apps/kordent-api`: API principal del sistema.
 - `apps/kordent-worker`: procesamiento de tareas en segundo plano.
 - `apps/kordent-cli`: herramientas de administración por terminal.

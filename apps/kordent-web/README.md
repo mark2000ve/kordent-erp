@@ -26,3 +26,13 @@ npm run build --prefix apps/kordent-web
 ```
 
 La aplicación web utilizará la API central. El funcionamiento completamente offline se proporcionará mediante la aplicación de escritorio y su almacenamiento local.
+
+## Aplicación de escritorio
+
+La aplicación de escritorio utiliza Tauri y reutiliza este mismo frontend.
+
+```bash
+npm run desktop:dev --prefix apps/kordent-web
+```
+
+Tauri requiere las dependencias nativas correspondientes al sistema operativo donde se compile. El desarrollo Linux puede ejecutarse mediante WSLg.
